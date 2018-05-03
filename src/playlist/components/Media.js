@@ -3,21 +3,17 @@ import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends Component{
-	constructor(props){
-		super(props);
-
-		this.handleClick = this.handleClick.bind(this);
-	}
-
 	handleClick = (event) =>{
 
 	}
 
 	render(){
 		return (
-			<div className="media" onClick={this.handleClick}>
+			<div className="media" onClick={this.props.handleClick}>
 				<div className="media-cover">
-					<div style={{ backgroundImage: `url(${this.props.cover})`, backgroundSize: 'cover', backgroundPosition:'center center' }} />
+					<div>
+						<div className="media-image" style={{ backgroundImage: `url(${this.props.cover})`}} />
+					</div>
 					<h3 className="media-title">{this.props.title}</h3>
 					<p className="media-author">{this.props.author}</p>
 				</div>

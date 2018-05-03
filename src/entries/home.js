@@ -5,8 +5,8 @@ import Home from '../pages/containers/Home';
 //API data
 import data from '../api.json';
 
-const app = document.getElementById('app');
+const homeContainer = document.getElementById('home-container');
 
 ReactDOM.render(
 		<Home data={data} />
-,app);
+,homeContainer);

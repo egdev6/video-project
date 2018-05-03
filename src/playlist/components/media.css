@@ -12,6 +12,19 @@
 	border:1px solid #c4c0c0;
 }
 
+.media .media-cover > div{
+	overflow:hidden;
+}
+.media-image{
+	background-size: cover; 
+	background-position: center center;
+	transition: all 0.3s ease-in-out;
+}
+
+.media-cover:hover .media-image{
+	transform:scale(1.2);
+}
+
 .media .media-cover div{
 	width:100%;
 	height:140px;
