@@ -1,0 +1,8 @@
+.Related{
+	width:300px;
+}
+.Related > img{
+	width:80%;
+	position:relative;
+	left:10%;
+}

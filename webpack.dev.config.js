@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    "video-project":path.resolve(__dirname, 'index.js'),
+    "home": path.resolve(__dirname, 'src/entries/home.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -39,7 +39,7 @@ module.exports = {
           options: {
             limit: 10000,
             fallback: 'file-loader',
-            name: 'images/[name].[hash].[ext]',
+            name: 'images/[name].[ext]',
           }
         }
       }

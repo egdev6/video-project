@@ -1,0 +1,15 @@
+.Category{
+	padding:15px;
+	border-top:1px solid grey;
+}
+
+.Category > p{
+	font-size:14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color:#565656;
+}
+.Category > h2{
+	padding:10px;
+	border-left:5px solid #FF2A34;
+}

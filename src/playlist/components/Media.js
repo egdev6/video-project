@@ -17,7 +17,7 @@ class Media extends Component{
 		return (
 			<div className="media" onClick={this.handleClick}>
 				<div className="media-cover">
-					<img src={this.props.cover} alt="image"/>
+					<div style={{ backgroundImage: `url(${this.props.cover})`, backgroundSize: 'cover', backgroundPosition:'center center' }} />
 					<h3 className="media-title">{this.props.title}</h3>
 					<p className="media-author">{this.props.author}</p>
 				</div>
