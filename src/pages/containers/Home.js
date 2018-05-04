@@ -5,6 +5,7 @@ import Related from '../components/Related';
 import ModalContainer from '../../widgets/containers/ModalContainer';
 import Modal from '../../widgets/components/Modal';
 import HandleError from '../../error/containers/HandleError';
+import VideoPlayer from '../../player/containers/VideoPlayer';
 
 class Home extends Component{
 	state = {
@@ -25,6 +26,9 @@ class Home extends Component{
 			<HandleError>
 				<HomeLayout>
 					<Related />
+					<VideoPlayer 
+						autoplay
+					/>
 					<Categories 
 					handleOpenModal={this.handleOpenModal}
 					categories={this.props.data.categories} />

@@ -5,7 +5,7 @@ import Icon from '../../icons/components/Icon';
 function Modal(props){
 	return (
 		<div className="Modal">
-			<a href="#" onClick={props.handleClick}>
+			<a className="close" href="#" onClick={props.handleClick}>
 				<Icon name="times-circle" size="lg" />
 			</a>
 			{props.children}

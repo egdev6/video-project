@@ -4,7 +4,7 @@ import './error.css';
 
 function RegularError(props){
 	return(
-		<img class="error" src={error} alt="Ocurio un error"/>
+		<img className="error" src={error} alt="Ocurio un error"/>
 	)
 }
 
