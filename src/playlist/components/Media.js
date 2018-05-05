@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends Component{
-	handleClick = (event) =>{
 
+	handleClick = (event) => {
+		this.props.openModal(this.props);
 	}
 
 	render(){
 		return (
-			<div className="media" onClick={this.props.handleClick}>
+			<div className="media" onClick={this.handleClick}>
 				<div className="media-cover">
 					<div>
 						<div className="media-image" style={{ backgroundImage: `url(${this.props.cover})`}} />

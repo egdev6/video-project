@@ -6,7 +6,7 @@ function Modal(props){
 	return (
 		<div className="Modal">
 			<a className="close" href="#" onClick={props.handleClick}>
-				<Icon name="times-circle" size="lg" />
+				<Icon name="times-circle" size="2x" />
 			</a>
 			{props.children}
 		</div>

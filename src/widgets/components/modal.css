@@ -1,13 +1,14 @@
 .Modal{
 	width:100%;
-	max-width:800px;
-	min-height:70vh;
+	height: auto;
+	max-width:900px;
+	min-height:50vh;
 	margin: 0 auto;
 	position:fixed;
 	left:0;
 	right:0;
-	top:15vh;
-	padding:20px;
+	top:10vh;
+	padding:15px;
 	border-radius: 5px;
 	background-color:#eaeaea;
 	border:1px solid #c4c0c0;
@@ -16,5 +17,9 @@
 .close{
 	float:right;
 	color:black;
-	text-decoration: none;
+	text-decoration: none;position: absolute;
+	right:-15px;
+	top:-15px;
+	background-color: white;
+	border-radius: 50%;
 }

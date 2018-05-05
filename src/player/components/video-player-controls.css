@@ -1,0 +1,22 @@
+.VideoPlayerControls{
+	display:flex;
+	justify-content: space-between;
+	position:absolute;
+	align-content: center;
+	background:rgba(29,32,50,.6);
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:2;
+	padding:13px 15px;
+	color:white;
+	opacity:0;
+	transition: all 0.3s ease-in-out;
+}
+.VideoPlayerControls .block{
+	width:50%;
+	display:flex;
+}
+.VideoPlayerControls .block:last-child{
+	justify-content: flex-end;
+}

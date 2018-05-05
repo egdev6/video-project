@@ -1,0 +1,9 @@
+.ProgressBar{
+	position:absolute;
+	width:100%;
+	bottom: 30px;
+	right: 0px;
+}
+.ProgressBar input{
+	width:100%;
+}

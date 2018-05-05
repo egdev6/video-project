@@ -1,3 +1,6 @@
 .VideoPlayerLayout{
 	position:relative;
 }
+.VideoPlayerLayout:hover .VideoPlayerControls{
+	opacity:1;
+}

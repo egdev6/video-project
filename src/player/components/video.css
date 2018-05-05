@@ -1,8 +1,11 @@
 .Video{
-	width:inherit;
+	width:100%;
 }
 
 .Video video{
-	width:inherit;
+	width:100%;
 	vertical-align:middle;
+}
+div:-webkit-full-screen{
+	width:100% !important;
 }
