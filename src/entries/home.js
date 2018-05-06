@@ -2,24 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //Componentes
 import Home from '../pages/containers/Home';
-//API data
-import data from '../api.json';
-import { createStore } from 'redux';
+//Redux
 import { Provider } from 'react-redux';
-
-const initialState = {
-	data: {
-		...data
-	}
-}
+import { createStore } from 'redux';
+import reducer from '../reducers/index';
+//Immutable JS
+import {Map as map} from 'immutable';
 
 const store = createStore(
-	(state) => state,//reducer
-	initialState,//initialState
+	reducer,//reducer
+	map(),//initialState
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),//enhacer
 );
-
-console.log(store.getState());
 
 const homeContainer = document.getElementById('home-container');
 ReactDOM.render(

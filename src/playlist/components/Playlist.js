@@ -1,5 +1,5 @@
 import React from 'react';
-import Media from './Media.js';
+import MediaContainer from '../containers/MediaContainer';
 import './playlist.css';
 
 //Componente funcional->si no requiere ciclo de vida
@@ -8,9 +8,9 @@ function Playlist(props){
 		<div className="Playlist">
 			{
 				props.playlist.map((item) => {
-					return <Media 
-						{...item} 
-						key={item.id} 
+					return <MediaContainer 
+						id={item} 
+						key={item} 
 						openModal={props.handleOpenModal}
 					/>
 				})
