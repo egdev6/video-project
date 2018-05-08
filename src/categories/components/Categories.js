@@ -13,6 +13,7 @@ function Categories(props){
 						return <Media 
 							{...item.toJS()} 
 							key={item.get('id')}
+							openModal={props.handleOpenModal}
 						/>
 				})
 			}

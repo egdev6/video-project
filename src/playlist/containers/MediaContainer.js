@@ -3,7 +3,7 @@ import Media from '../components/Media';
 import {connect} from 'react-redux';
 
 class MediaContainer extends Component{
-	openModal(){
+	openModal = (id) => {
 		this.props.dispatch({
 			type: 'OPEN_MODAL',
 			payload:{
@@ -12,7 +12,7 @@ class MediaContainer extends Component{
 		});
 	}
 	render(){
- 		return <Media openModal={} {...this.props.data.toJS()} />
+ 		return <Media openModal={this.openModal} {...this.props.data.toJS()} />
  	}
 }
 
