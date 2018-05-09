@@ -28,6 +28,7 @@ class Home extends Component{
 					handleOpenModal={this.handleOpenModal}
 					categories={this.props.categories} 
 					search={this.props.search}
+					isLoading={this.props.isLoading}
 					/>
 					{
 						this.props.modal.get('visibility') &&
@@ -62,10 +63,14 @@ function mapStateToProps(state, props){
 			return item.get('author').toLowerCase().includes(search.toLowerCase());
 		}).toList();
 	}
+
+	const loading = state.get('isLoading').get('active');
+
 	return{
 		categories,
 		search: searchResult,
 		modal: state.get('modal'),
+		isLoading: loading
 	}
 }
 

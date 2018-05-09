@@ -8,6 +8,11 @@ function Categories(props){
 	return (
 		<div className="Categories">
 			<SearchContainer />
+			<div className="Playlist">
+			{
+				props.isLoading &&
+				<p>Buscando Videos...</p>
+			}
 			{
 				props.search.map((item) => {
 						return <Media 
@@ -17,6 +22,7 @@ function Categories(props){
 						/>
 				})
 			}
+			</div>
 			{
 				props.categories.map((item) => {
 					return <Category 

@@ -4,18 +4,27 @@ import ReactDOM from 'react-dom';
 import Home from '../pages/containers/Home';
 //Redux
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducer from '../reducers/index';
 //Immutable JS
 import {Map as map} from 'immutable';
+import {logger} from 'redux-logger';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
 const store = createStore(
 	reducer,//reducer
 	map(),//initialState
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),//enhacer
+	composeWithDevTools(
+		applyMiddleware(
+			logger,
+			thunk,
+		)
+	)
 );
 
 const homeContainer = document.getElementById('home-container');
+
 ReactDOM.render(
 	<Provider store={store}>
 		<Home />
